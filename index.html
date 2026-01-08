@@ -29,9 +29,13 @@
             line-height: 1.6;
         }
 
+        /* ===== HEADER / HERO ===== */
         header {
-            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-                        url('https://images.unsplash.com/photo-1627485937980-bcfe3c6d594a') center/cover;
+            background:
+                linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('https://images.unsplash.com/photo-1626078299010-7e44c3c1b80d?auto=format&fit=crop&w=1600&q=80');
+            background-position: center;
+            background-size: cover;
             height: 100vh;
             color: white;
             display: flex;
@@ -43,7 +47,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 25px 8%;
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgba(0,0,0,0.45);
         }
 
         nav h1 {
@@ -79,13 +83,13 @@
         }
 
         .hero h2 {
-            font-size: 48px;
+            font-size: 50px;
             margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 18px;
-            max-width: 700px;
+            max-width: 720px;
             margin: auto;
         }
 
@@ -103,7 +107,7 @@
             color: var(--azul);
         }
 
-        .about, .services, .values {
+        .about, .services, .values, .products {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
@@ -112,8 +116,8 @@
         .card {
             background: white;
             padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             transition: transform 0.3s;
         }
 
@@ -126,8 +130,38 @@
             color: var(--azul);
         }
 
-        .card p {
-            font-size: 15px;
+        /* ===== PRODUCTOS ===== */
+        .product-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-card .content {
+            padding: 25px;
+        }
+
+        .product-card a {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: var(--celeste);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
         }
 
         .banner {
@@ -135,37 +169,6 @@
             color: white;
             text-align: center;
             padding: 70px 15%;
-        }
-
-        .banner h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .contact {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-        }
-
-        .contact form input,
-        .contact form textarea {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 15px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-        }
-
-        .contact form button {
-            background-color: var(--celeste);
-            color: white;
-            border: none;
-            padding: 14px;
-            width: 100%;
-            font-size: 16px;
-            border-radius: 6px;
-            cursor: pointer;
         }
 
         footer {
@@ -191,126 +194,53 @@
         <ul>
             <li><a href="#nosotros">Nosotros</a></li>
             <li><a href="#servicios">Producción</a></li>
-            <li><a href="#valores">Valores</a></li>
+            <li><a href="#productos">Productos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <div class="hero">
         <div>
-            <h2>Excelencia en Producción Camaronera</h2>
+            <h2>Producción Camaronera de Clase Mundial</h2>
             <p>
-                MARFIGAN es una empresa dedicada a la producción, cultivo y exportación
-                de camarón de alta calidad, comprometida con la sostenibilidad y la innovación.
+                Cultivamos camarón ecuatoriano con altos estándares de calidad,
+                sostenibilidad y tecnología para mercados nacionales e internacionales.
             </p>
         </div>
     </div>
 </header>
 
-<section id="nosotros">
+<section id="productos" style="background-color: var(--gris);">
     <div class="section-title">
-        <h2>¿Quiénes Somos?</h2>
+        <h2>Nuestros Productos</h2>
     </div>
-    <div class="about">
-        <div class="card">
-            <h3>Nuestra Empresa</h3>
-            <p>
-                MARFIGAN es una camaronera ecuatoriana que opera bajo estrictos
-                estándares de calidad, bioseguridad y responsabilidad ambiental.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Misión</h3>
-            <p>
-                Producir camarón de clase mundial, garantizando frescura,
-                trazabilidad y procesos sostenibles.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Visión</h3>
-            <p>
-                Ser una empresa líder en el sector acuícola, reconocida
-                por su innovación y compromiso con el medio ambiente.
-            </p>
-        </div>
-    </div>
-</section>
 
-<section id="servicios" style="background-color: var(--gris);">
-    <div class="section-title">
-        <h2>Nuestros Procesos</h2>
-    </div>
-    <div class="services">
-        <div class="card">
-            <h3>Cultivo Controlado</h3>
-            <p>
-                Manejo técnico de piscinas camaroneras con monitoreo constante
-                de calidad de agua y alimentación.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Bioseguridad</h3>
-            <p>
-                Protocolos estrictos que garantizan la sanidad del producto
-                desde la siembra hasta la cosecha.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Exportación</h3>
-            <p>
-                Procesos orientados a mercados nacionales e internacionales
-                cumpliendo normas de calidad.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section id="valores">
-    <div class="section-title">
-        <h2>Valores Corporativos</h2>
-    </div>
-    <div class="values">
-        <div class="card">
-            <h3>Calidad</h3>
-            <p>Compromiso permanente con la excelencia del producto.</p>
-        </div>
-        <div class="card">
-            <h3>Sostenibilidad</h3>
-            <p>Respeto al ecosistema y uso responsable de los recursos.</p>
-        </div>
-        <div class="card">
-            <h3>Responsabilidad</h3>
-            <p>Ética empresarial y responsabilidad social.</p>
-        </div>
-    </div>
-</section>
-
-<div class="banner">
-    <h2>MARFIGAN – Camarón de Confianza</h2>
-    <p>Producción responsable que cumple estándares internacionales</p>
-</div>
-
-<section id="contacto">
-    <div class="section-title">
-        <h2>Contacto</h2>
-    </div>
-    <div class="contact">
-        <div class="card">
-            <h3>Información</h3>
-            <p><strong>Empresa:</strong> MARFIGAN</p>
-            <p><strong>Sector:</strong> Acuícola – Camaronera</p>
-            <p><strong>Ubicación:</strong> Ecuador</p>
-            <p><strong>Email:</strong> contacto@marfigan.com</p>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1617196035090-6e04f6f1a4b0?auto=format&fit=crop&w=900&q=80">
+            <div class="content">
+                <h3>Camarón Entero</h3>
+                <p>Camarón fresco cultivado bajo controles estrictos de calidad y bioseguridad.</p>
+                <a href="#contacto">Más información</a>
+            </div>
         </div>
 
-        <div class="card">
-            <h3>Escríbenos</h3>
-            <form>
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Correo electrónico" required>
-                <textarea rows="5" placeholder="Mensaje"></textarea>
-                <button type="submit">Enviar mensaje</button>
-            </form>
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1604908177522-0501f1e98d5b?auto=format&fit=crop&w=900&q=80">
+            <div class="content">
+                <h3>Camarón Congelado</h3>
+                <p>Producto procesado y congelado para preservar frescura y sabor.</p>
+                <a href="#contacto">Más información</a>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1627485937980-bcfe3c6d594a?auto=format&fit=crop&w=900&q=80">
+            <div class="content">
+                <h3>Camarón de Exportación</h3>
+                <p>Seleccionado por talla y calidad cumpliendo normas internacionales.</p>
+                <a href="#contacto">Más información</a>
+            </div>
         </div>
     </div>
 </section>
