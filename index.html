@@ -9,11 +9,10 @@
 
 <style>
 :root{
-    --azul-oscuro:#0f2f36;
-    --verde-mar:#1f5f63;
-    --celeste:#4fa3a5;
-    --gris:#f2f4f6;
-    --texto:#1e1e1e;
+    --azul:#0f3d3e;
+    --verde:#2f7f7b;
+    --gris:#f3f5f6;
+    --oscuro:#1e1e1e;
 }
 
 *{
@@ -25,13 +24,13 @@
 
 body{
     background:var(--gris);
-    color:var(--texto);
+    color:var(--oscuro);
     line-height:1.7;
 }
 
-/* NAV */
+/* HEADER */
 header{
-    background:var(--azul-oscuro);
+    background:var(--azul);
     color:white;
 }
 
@@ -59,18 +58,18 @@ nav a{
     font-weight:500;
 }
 
-/* HERO */
-.hero{
+/* INICIO */
+#inicio{
     padding:90px 10%;
     text-align:center;
 }
 
-.hero h2{
+#inicio h2{
     font-size:42px;
     margin-bottom:20px;
 }
 
-.hero p{
+#inicio p{
     max-width:800px;
     margin:auto;
     font-size:18px;
@@ -78,42 +77,42 @@ nav a{
 
 /* SECCIONES */
 section{
-    padding:80px 10%;
     background:white;
+    padding:80px 10%;
     margin-bottom:20px;
 }
 
 .section-title{
     text-align:center;
-    margin-bottom:50px;
+    margin-bottom:40px;
 }
 
 .section-title h2{
     font-size:34px;
-    color:var(--azul-oscuro);
+    color:var(--azul);
 }
 
-/* BLOQUES */
-.grid{
+/* PRODUCTOS */
+.productos{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:40px;
+    gap:35px;
 }
 
-.card{
+.producto{
     background:var(--gris);
     padding:30px;
     border-radius:14px;
 }
 
-.card h3{
-    color:var(--verde-mar);
+.producto h3{
+    color:var(--verde);
     margin-bottom:15px;
 }
 
 /* CONTACTO */
 #contacto{
-    background:var(--azul-oscuro);
+    background:var(--azul);
     color:white;
     text-align:center;
 }
@@ -124,14 +123,16 @@ section{
 
 /* FOOTER */
 footer{
-    background:#081d22;
+    background:#0a2a2a;
     color:white;
     text-align:center;
     padding:25px;
 }
 
 @media(max-width:768px){
-    .hero h2{font-size:32px;}
+    #inicio h2{
+        font-size:32px;
+    }
 }
 </style>
 </head>
@@ -142,72 +143,42 @@ footer{
 <nav>
     <h1>MARFIGAN</h1>
     <ul>
-        <li><a href="#empresa">Empresa</a></li>
-        <li><a href="#produccion">Producción</a></li>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#quienes">Quiénes somos</a></li>
         <li><a href="#productos">Productos</a></li>
         <li><a href="#contacto">Contacto</a></li>
     </ul>
 </nav>
 
-<div class="hero">
+<section id="inicio">
     <h2>Empresa Camaronera Ecuatoriana</h2>
     <p>
-        MARFIGAN es una empresa dedicada al cultivo, procesamiento y comercialización de camarón,
-        cumpliendo estándares de calidad, sostenibilidad y responsabilidad ambiental.
+        MARFIGAN es una empresa dedicada a la producción camaronera,
+        orientada a la calidad, sostenibilidad y cumplimiento de estándares
+        nacionales e internacionales.
     </p>
-</div>
+</section>
 </header>
 
-<section id="empresa">
+<section id="nosotros">
+<div class="section-title">
+    <h2>Nosotros</h2>
+</div>
+<p>
+    Somos una empresa camaronera comprometida con el desarrollo del sector acuícola
+    ecuatoriano. Trabajamos bajo principios de responsabilidad, eficiencia productiva
+    y respeto al medio ambiente.
+</p>
+</section>
+
+<section id="quienes">
 <div class="section-title">
     <h2>Quiénes Somos</h2>
 </div>
 <p>
-    MARFIGAN es una empresa camaronera ubicada en la costa ecuatoriana, enfocada en la producción
-    responsable de camarón para el mercado nacional e internacional. Nuestra operación se basa en
-    buenas prácticas acuícolas, control sanitario y mejora continua.
-</p>
-</section>
-
-<section>
-<div class="grid">
-
-<div class="card">
-<h3>Misión</h3>
-<p>
-    Producir camarón de alta calidad, garantizando la seguridad alimentaria,
-    el respeto al medio ambiente y la satisfacción de nuestros clientes.
-</p>
-</div>
-
-<div class="card">
-<h3>Visión</h3>
-<p>
-    Ser una empresa camaronera reconocida a nivel nacional e internacional
-    por su excelencia productiva y compromiso sostenible.
-</p>
-</div>
-
-<div class="card">
-<h3>Valores</h3>
-<p>
-    Responsabilidad, ética, calidad, innovación, respeto ambiental
-    y compromiso con nuestros colaboradores.
-</p>
-</div>
-
-</div>
-</section>
-
-<section id="produccion">
-<div class="section-title">
-    <h2>Proceso Productivo</h2>
-</div>
-<p>
-    Nuestro proceso productivo inicia con la preparación de piscinas,
-    control de larvas certificadas, alimentación balanceada,
-    monitoreo de parámetros del agua, cosecha y procesamiento,
-    cumpliendo normas sanitarias y de bioseguridad.
+    MARFIGAN está conformada por un equipo humano capacitado que aplica buenas prácticas
+    acuícolas, control sanitario y procesos productivos orientados a la excelencia.
 </p>
 </section>
 
@@ -216,25 +187,25 @@ footer{
     <h2>Productos</h2>
 </div>
 
-<div class="grid">
+<div class="productos">
 
-<div class="card">
+<div class="producto">
 <h3>Camarón Entero</h3>
 <p>
-    Camarón fresco destinado al mercado nacional e internacional,
-    cosechado bajo estrictos controles de calidad.
+    Producto fresco destinado al mercado nacional e internacional,
+    cosechado bajo controles de calidad.
 </p>
 </div>
 
-<div class="card">
+<div class="producto">
 <h3>Camarón Congelado</h3>
 <p>
-    Producto procesado y congelado para conservar su frescura,
-    sabor y valor nutricional.
+    Camarón procesado y conservado mediante sistemas de congelación
+    para garantizar su frescura.
 </p>
 </div>
 
-<div class="card">
+<div class="producto">
 <h3>Camarón de Exportación</h3>
 <p>
     Selección especial que cumple con los estándares exigidos
@@ -243,26 +214,6 @@ footer{
 </div>
 
 </div>
-</section>
-
-<section>
-<div class="section-title">
-    <h2>Compromiso Ambiental</h2>
-</div>
-<p>
-    MARFIGAN aplica prácticas sostenibles para minimizar el impacto ambiental,
-    optimizar el uso del agua y contribuir al desarrollo responsable del sector acuícola.
-</p>
-</section>
-
-<section>
-<div class="section-title">
-    <h2>Certificaciones</h2>
-</div>
-<p>
-    Nuestra empresa opera bajo lineamientos de Buenas Prácticas Acuícolas (BPA),
-    normas sanitarias nacionales y estándares internacionales de calidad.
-</p>
 </section>
 
 <section id="contacto">
