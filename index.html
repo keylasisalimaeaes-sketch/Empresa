@@ -3,137 +3,126 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARFIGAN | Camaronera</title>
+<title>MARFIGAN | Camaronera Ecuatoriana</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Montserrat', sans-serif;
-}
-
 body{
-    background:#e9f1f1;
-    color:#1b1b1b;
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#dfecec;
+    color:#111;
 }
 
-/* NAV */
-nav{
-    background:#083d3d;
+/* BARRA SUPERIOR */
+header{
+    background:#063b3b;
     color:white;
+}
+
+.topbar{
+    padding:15px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 8%;
 }
 
-nav h1{
-    font-size:32px;
+.topbar h1{
+    font-size:30px;
     font-weight:900;
-    letter-spacing:3px;
+    letter-spacing:4px;
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav a{
+.topbar nav a{
     color:white;
     text-decoration:none;
-    font-weight:600;
+    margin-left:25px;
+    font-weight:700;
 }
 
 /* HERO */
-#inicio{
-    min-height:100vh;
-    background:linear-gradient(160deg,#0b4f4f,#0f6f6a,#1fa19b);
-    color:white;
-    display:flex;
-    align-items:center;
-    padding:0 10%;
+.hero{
+    padding:70px 6%;
+    background:linear-gradient(180deg,#063b3b,#0b5c5c,#137f7f);
 }
 
-#inicio h2{
-    font-size:72px;
+.hero h2{
+    font-size:78px;
     font-weight:900;
-    line-height:1.1;
-    margin-bottom:20px;
+    margin:0;
 }
 
-#inicio h3{
-    font-size:34px;
-    margin-bottom:25px;
+.hero h3{
+    font-size:36px;
+    margin:15px 0;
+    font-weight:700;
 }
 
-#inicio p{
+.hero p{
     font-size:20px;
-    max-width:900px;
-    line-height:1.7;
+    max-width:1200px;
+    line-height:1.8;
 }
 
 /* SECCIONES */
-section{
+.section{
+    padding:50px 6%;
     background:white;
-    margin:15px auto;
-    padding:50px 10%;
-    max-width:1400px;
-    border-radius:10px;
 }
 
-.section-title{
-    margin-bottom:25px;
+.section.dark{
+    background:#f1f7f7;
 }
 
-.section-title h2{
-    font-size:38px;
+.section h2{
+    font-size:40px;
+    margin-bottom:15px;
     font-weight:900;
-    color:#0b4f4f;
-    margin-bottom:10px;
+    color:#063b3b;
 }
 
-.section-title p{
+.section p{
     font-size:18px;
-    max-width:900px;
+    line-height:1.8;
+    max-width:1400px;
 }
 
 /* PRODUCTOS */
-.productos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+.product-list{
+    margin-top:20px;
 }
 
-.producto{
-    background:#f0f6f6;
-    padding:25px;
-    border-left:6px solid #1fa19b;
+.product{
+    padding:18px 0;
+    border-bottom:2px solid #cfdede;
 }
 
-.producto h3{
-    font-size:22px;
-    color:#0b4f4f;
-    margin-bottom:10px;
+.product h3{
+    font-size:24px;
+    margin-bottom:5px;
+    color:#0b5c5c;
 }
 
-.producto p{
-    font-size:16px;
-    line-height:1.6;
+.product p{
+    font-size:17px;
+    margin:0;
 }
 
 /* CONTACTO */
-#contacto{
-    background:#083d3d;
+.contact{
+    background:#063b3b;
     color:white;
+    padding:50px 6%;
+}
+
+.contact p{
+    font-size:18px;
 }
 
 /* FOOTER */
 footer{
-    background:#052828;
+    background:#031f1f;
     color:white;
     text-align:center;
     padding:20px;
@@ -143,94 +132,96 @@ footer{
 
 <body>
 
-<nav>
-    <h1>MARFIGAN</h1>
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</nav>
+<header>
+    <div class="topbar">
+        <h1>MARFIGAN</h1>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </div>
 
-<section id="inicio">
-<div>
-    <h2>MARFIGAN</h2>
-    <h3>Producción camaronera con estándares de excelencia internacional</h3>
+    <div class="hero" id="inicio">
+        <h2>MARFIGAN</h2>
+        <h3>Líderes en producción camaronera sostenible</h3>
+        <p>
+            MARFIGAN es una empresa camaronera ecuatoriana especializada en el cultivo,
+            procesamiento y comercialización de camarón de alta calidad. Nuestra operación
+            integra tecnología, control sanitario riguroso y prácticas responsables que
+            garantizan productos confiables para el mercado nacional e internacional,
+            fortaleciendo la economía del país y el desarrollo del sector acuícola.
+        </p>
+    </div>
+</header>
+
+<div class="section" id="nosotros">
+    <h2>Nosotros</h2>
     <p>
-        Somos una empresa ecuatoriana dedicada al cultivo, procesamiento y
-        comercialización de camarón de alta calidad. Nuestro compromiso se
-        basa en la eficiencia productiva, el control sanitario riguroso y el
-        respeto al medio ambiente, garantizando productos confiables para
-        mercados nacionales e internacionales.
+        Somos una organización dedicada al desarrollo de la actividad camaronera bajo
+        principios de eficiencia, responsabilidad ambiental y mejora continua. MARFIGAN
+        implementa procesos productivos controlados, garantizando trazabilidad, calidad
+        sanitaria y cumplimiento de normativas nacionales e internacionales.
     </p>
 </div>
-</section>
 
-<section id="nosotros">
-<div class="section-title">
-    <h2>Nosotros</h2>
-    <p>Comprometidos con el desarrollo sostenible del sector acuícola.</p>
+<div class="section dark">
+    <h2>Quiénes Somos</h2>
+    <p>
+        MARFIGAN está conformada por un equipo multidisciplinario de profesionales con
+        experiencia en acuicultura, control de calidad y gestión empresarial. Nuestro
+        objetivo es producir camarón de alto valor comercial, manteniendo estándares
+        técnicos que aseguren la satisfacción del cliente y la sostenibilidad de nuestras
+        operaciones.
+    </p>
 </div>
-<p>
-    MARFIGAN opera bajo procesos técnicos controlados, aplicando buenas
-    prácticas acuícolas, bioseguridad y trazabilidad. Nuestro equipo humano
-    está conformado por profesionales con experiencia en producción,
-    control de calidad y gestión empresarial.
-</p>
-</section>
 
-<section id="productos">
-<div class="section-title">
+<div class="section" id="productos">
     <h2>Productos</h2>
-    <p>Amplia línea de camarón adaptada a las exigencias del mercado.</p>
+
+    <div class="product-list">
+        <div class="product">
+            <h3>Camarón Entero Fresco</h3>
+            <p>Cosechado bajo controles estrictos, destinado a consumo nacional.</p>
+        </div>
+
+        <div class="product">
+            <h3>Camarón Entero Congelado</h3>
+            <p>Procesado y conservado para mantener frescura y calidad.</p>
+        </div>
+
+        <div class="product">
+            <h3>Camarón sin Cabeza</h3>
+            <p>Presentación ideal para exportación y procesamiento industrial.</p>
+        </div>
+
+        <div class="product">
+            <h3>Camarón Clasificado por Talla</h3>
+            <p>Estandarizado según requerimientos comerciales específicos.</p>
+        </div>
+
+        <div class="product">
+            <h3>Camarón Premium de Exportación</h3>
+            <p>Selección especial para mercados internacionales exigentes.</p>
+        </div>
+
+        <div class="product">
+            <h3>Camarón Procesado</h3>
+            <p>Producto con valor agregado listo para distribución comercial.</p>
+        </div>
+    </div>
 </div>
 
-<div class="productos">
-    <div class="producto">
-        <h3>Camarón Entero Fresco</h3>
-        <p>Producto de cosecha directa con óptima calidad y frescura.</p>
-    </div>
-
-    <div class="producto">
-        <h3>Camarón Entero Congelado</h3>
-        <p>Procesado y conservado bajo estándares sanitarios.</p>
-    </div>
-
-    <div class="producto">
-        <h3>Camarón sin Cabeza</h3>
-        <p>Presentación ideal para exportación y procesamiento industrial.</p>
-    </div>
-
-    <div class="producto">
-        <h3>Camarón Clasificado por Talla</h3>
-        <p>Producto estandarizado según requerimientos comerciales.</p>
-    </div>
-
-    <div class="producto">
-        <h3>Camarón Premium</h3>
-        <p>Selección especial para mercados internacionales exigentes.</p>
-    </div>
-
-    <div class="producto">
-        <h3>Camarón Procesado</h3>
-        <p>Producto con valor agregado para distribución comercial.</p>
-    </div>
-</div>
-</section>
-
-<section id="contacto">
-<div class="section-title">
+<div class="contact" id="contacto">
     <h2>Contacto</h2>
-    <p>Información de contacto empresarial.</p>
+    <p>📧 contacto@marfigan.com</p>
+    <p>📞 +593 99 999 9999</p>
+    <p>📍 Ecuador</p>
 </div>
-<p>📧 contacto@marfigan.com</p>
-<p>📞 +593 99 999 9999</p>
-<p>📍 Ecuador</p>
-</section>
 
 <footer>
-© 2026 MARFIGAN | Empresa Camaronera
+    © 2026 MARFIGAN | Empresa Camaronera Ecuatoriana
 </footer>
 
 </body>
