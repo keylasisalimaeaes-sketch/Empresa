@@ -10,101 +10,122 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-    background: linear-gradient(180deg,#f4f8f7,#e6f2ef);
-    color:#0b3d3a;
+    background:#eef6f4;
+    color:#083c3a;
 }
 
-/* ===== HEADER ===== */
-header{
+/* ===== NAV ===== */
+nav{
     background: linear-gradient(90deg,#0b5f5a,#0f766e);
-    padding:25px;
-    text-align:center;
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-header h1{
-    font-size:3.5rem;
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+}
+
+nav ul li a{
     color:white;
-    letter-spacing:2px;
+    text-decoration:none;
+    font-size:1.3rem;
+    font-weight:bold;
 }
 
-header p{
-    font-size:1.6rem;
-    color:#e0fffb;
-    margin-top:10px;
+nav ul li a:hover{
+    text-decoration:underline;
 }
 
 /* ===== HERO ===== */
-.hero{
+#inicio{
     background:
-    linear-gradient(rgba(0,70,65,0.75),rgba(0,70,65,0.75)),
+    linear-gradient(rgba(0,70,65,0.8),rgba(0,70,65,0.8)),
     url("https://images.unsplash.com/photo-1621799754526-a0d52c49fad5");
     background-size:cover;
     background-position:center;
-    padding:120px 40px;
+    padding:140px 40px;
     text-align:center;
     color:white;
 }
 
-.hero h2{
-    font-size:4rem;
-    margin-bottom:25px;
+#inicio h1{
+    font-size:4.5rem;
+    letter-spacing:3px;
 }
 
-.hero p{
-    font-size:1.9rem;
+#inicio p{
+    font-size:2.1rem;
+    margin-top:25px;
     max-width:1000px;
-    margin:auto;
-    line-height:1.6;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 /* ===== SECTIONS ===== */
 section{
-    padding:80px 60px;
+    padding:90px 60px;
 }
 
 .section-title{
     text-align:center;
-    font-size:3.2rem;
-    margin-bottom:50px;
-    color:#064e4a;
+    font-size:3.5rem;
+    margin-bottom:60px;
 }
 
-/* ===== ABOUT ===== */
-.about{
-    background: linear-gradient(180deg,#ffffff,#eefaf8);
+/* ===== QUIENES SOMOS ===== */
+#quienes{
+    background:linear-gradient(180deg,#ffffff,#e8f4f2);
 }
 
-.about-grid{
+#quienes p{
+    font-size:1.7rem;
+    max-width:1000px;
+    margin:auto;
+    line-height:1.8;
+    text-align:center;
+}
+
+/* ===== MISION VISION OBJETIVOS ===== */
+#mvo{
+    background:linear-gradient(180deg,#dff1ed,#c8ebe5);
+}
+
+.mvo-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:40px;
 }
 
-.about-box{
+.mvo-box{
     background:white;
-    padding:40px;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
 }
 
-.about-box h3{
-    font-size:2.6rem;
-    margin-bottom:20px;
+.mvo-box h3{
+    font-size:3rem;
+    margin-bottom:25px;
     color:#0b5f5a;
 }
 
-.about-box p{
-    font-size:1.5rem;
-    line-height:1.7;
+.mvo-box p{
+    font-size:1.6rem;
+    line-height:1.8;
 }
 
 /* ===== PRODUCTS ===== */
-.products{
-    background: linear-gradient(180deg,#e6f5f2,#d2efea);
+#productos{
+    background:linear-gradient(180deg,#e3f5f1,#cdeee8);
 }
 
 .product-grid{
@@ -121,9 +142,8 @@ section{
 }
 
 .product h4{
-    font-size:1.8rem;
+    font-size:1.9rem;
     margin-bottom:15px;
-    color:#064e4a;
 }
 
 .product p{
@@ -132,27 +152,24 @@ section{
 }
 
 /* ===== CONTACT ===== */
-.contact{
-    background: linear-gradient(135deg,#0b5f5a,#0f766e);
-    color:white;
+#contacto{
+    background:linear-gradient(135deg,#0b5f5a,#0f766e);
 }
 
-.contact h2{
+#contacto .section-title{
     color:white;
 }
 
 .contact-form{
-    max-width:700px;
+    max-width:750px;
     margin:auto;
     background:white;
-    padding:50px;
-    border-radius:22px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    padding:55px;
+    border-radius:25px;
 }
 
 .contact-form label{
     font-size:1.4rem;
-    color:#0b3d3a;
 }
 
 .contact-form input,
@@ -161,19 +178,16 @@ section{
     padding:15px;
     margin-top:8px;
     margin-bottom:25px;
-    border-radius:10px;
-    border:1px solid #ccc;
     font-size:1.2rem;
 }
 
 .contact-form button{
     width:100%;
     padding:18px;
+    font-size:1.6rem;
     background:#0b5f5a;
     color:white;
-    font-size:1.5rem;
     border:none;
-    border-radius:12px;
     cursor:pointer;
 }
 
@@ -190,55 +204,62 @@ footer{
 
 <body>
 
-<header>
-    <h1>MARFIGAN</h1>
-    <p>Excelencia acuícola que conecta calidad, sostenibilidad y confianza</p>
-</header>
+<nav>
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#quienes">Quiénes Somos</a></li>
+<li><a href="#mvo">Misión y Visión</a></li>
+<li><a href="#productos">Productos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+</nav>
 
-<section class="hero">
-    <h2>Producción Camaronera de Alto Nivel</h2>
-    <p>
-        En Marfigan desarrollamos procesos acuícolas responsables,
-        garantizando camarón de calidad superior mediante innovación,
-        control sanitario y compromiso ambiental.
-    </p>
+<section id="inicio">
+<h1>MARFIGAN</h1>
+<p>Calidad acuícola que impulsa confianza, sostenibilidad y excelencia productiva</p>
 </section>
 
-<section class="about">
-    <h2 class="section-title">Nuestra Empresa</h2>
-    <div class="about-grid">
-        <div class="about-box">
-            <h3>Misión</h3>
-            <p>
-                Producir y comercializar camarón de alta calidad cumpliendo
-                estándares internacionales, promoviendo prácticas sostenibles,
-                seguridad alimentaria y desarrollo responsable del sector acuícola.
-            </p>
-        </div>
-        <div class="about-box">
-            <h3>Visión</h3>
-            <p>
-                Ser una empresa camaronera líder a nivel nacional e internacional,
-                reconocida por su innovación tecnológica, excelencia operativa
-                y compromiso con el medio ambiente.
-            </p>
-        </div>
-        <div class="about-box">
-            <h3>Objetivos</h3>
-            <p>
-                • Incrementar la productividad sostenible.<br>
-                • Garantizar calidad y trazabilidad.<br>
-                • Expandir mercados internacionales.<br>
-                • Fortalecer la responsabilidad social y ambiental.
-            </p>
-        </div>
-    </div>
+<section id="quienes">
+<h2 class="section-title">Quiénes Somos</h2>
+<p>
+Marfigan es una empresa camaronera dedicada a la producción,
+procesamiento y comercialización de camarón bajo estrictos estándares
+de calidad, seguridad alimentaria y responsabilidad ambiental.
+</p>
 </section>
 
-<section class="products">
+<section id="mvo">
+<h2 class="section-title">Nuestra Identidad</h2>
+<div class="mvo-grid">
+<div class="mvo-box">
+<h3>Misión</h3>
+<p>Producir camarón de alta calidad garantizando procesos sostenibles,
+control sanitario y satisfacción del mercado nacional e internacional.</p>
+</div>
+
+<div class="mvo-box">
+<h3>Visión</h3>
+<p>Consolidarnos como una empresa camaronera líder, reconocida por su
+innovación, ética empresarial y compromiso ambiental.</p>
+</div>
+
+<div class="mvo-box">
+<h3>Objetivos</h3>
+<p>
+• Aumentar productividad sostenible.<br>
+• Garantizar calidad certificada.<br>
+• Expandir mercados internacionales.<br>
+• Fortalecer responsabilidad social.
+</p>
+</div>
+</div>
+</section>
+
+<section id="productos">
 <h2 class="section-title">Nuestros Productos</h2>
 <div class="product-grid">
-<!-- 32 PRODUCTOS -->
+
+<!-- 30 PRODUCTOS -->
 <script>
 const productos = [
 "Camarón Entero Fresco","Camarón Entero Congelado","Camarón Headless",
@@ -247,28 +268,27 @@ const productos = [
 "Camarón Premium","Camarón Exportación","Camarón Nacional",
 "Camarón Clasificado","Camarón Seleccionado","Camarón Crudo",
 "Camarón Procesado","Camarón Empacado","Camarón Certificado",
-"Camarón Orgánico","Camarón de Cultivo Controlado",
-"Camarón Alta Proteína","Camarón Sin Conservantes",
+"Camarón Orgánico","Camarón Alta Proteína","Camarón Sin Conservantes",
 "Camarón Estándar Internacional","Camarón Calidad A",
 "Camarón Calidad B","Camarón Comercial","Camarón Industrial",
-"Camarón Gourmet","Camarón Especial","Camarón Selección Oro","Camarón Export Plus"
+"Camarón Gourmet","Camarón Especial","Camarón Selección Oro"
 ];
 
 document.write(productos.map(p=>`
 <div class="product">
 <h4>${p}</h4>
-<p>Producto acuícola procesado bajo estrictos controles sanitarios,
-garantizando frescura, calidad y cumplimiento normativo.</p>
+<p>Producto procesado bajo controles sanitarios y estándares
+internacionales de calidad y trazabilidad.</p>
 </div>`).join(""));
 </script>
+
 </div>
 </section>
 
-<section class="contact">
+<section id="contacto">
 <h2 class="section-title">CONTACTO</h2>
 
 <div class="contact-form">
-<form>
 <label>Nombre</label>
 <input type="text">
 
@@ -284,8 +304,7 @@ garantizando frescura, calidad y cumplimiento normativo.</p>
 <label>Mensaje</label>
 <textarea rows="5"></textarea>
 
-<button>Enviar información</button>
-</form>
+<button>Enviar</button>
 </div>
 </section>
 
